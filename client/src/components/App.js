@@ -1,9 +1,9 @@
 import React from 'react';
-import PostComponent from './PostComponent';
+import Post from './Post';
 const App = () => {
   return (
     <div className="App">
-      <PostComponent />
+      <Post />
     </div>
   );
 };

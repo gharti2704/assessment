@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardComponent = (props) => {
+const PostList = (props) => {
   return (
     <div className="card">
       <div>{props.post.uiserId}</div>
@@ -11,4 +11,4 @@ const CardComponent = (props) => {
   );
 };
 
-export default CardComponent;
+export default PostList;
