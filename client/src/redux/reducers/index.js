@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import postReducer from './postReducer';
+import posts from './posts';
+import search from './search';
 
 const reducer = combineReducers({
-  postReducer: postReducer,
+  posts: posts,
+  search: search,
 });
 
 export default reducer;

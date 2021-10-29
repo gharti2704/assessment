@@ -6,3 +6,10 @@ export function getPosts(posts) {
     payload: posts,
   };
 }
+
+export function searchByTitle(title) {
+  return {
+    type: type.SEARCH_TITLE_REQUESTED,
+    payload: title,
+  };
+}

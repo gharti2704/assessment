@@ -1,15 +1,15 @@
 import React from 'react';
 import Post from './Post';
 import Footer from './Footer';
-import Header from './Header';
-import { Container } from 'react-bootsrtap';
+import Search from './Search';
+import { Container } from 'react-bootstrap';
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
       <main className="py-3">
         <Container>
+          <Search />
           <Post />
         </Container>
       </main>

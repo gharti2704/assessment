@@ -12,6 +12,7 @@ const Post = () => {
   useEffect(() => {
     dispatch(getPosts());
   }, [dispatch]);
+
   return (
     <div>
       {loading && <p>Loading...</p>}

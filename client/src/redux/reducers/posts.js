@@ -28,6 +28,26 @@ export default function posts(state = initialState, action) {
         error: action.message,
       };
 
+    case type.SEARCH_TITLE_REQUESTED:
+      return {
+        ...state,
+        loading: true,
+      };
+
+    case type.SEARCH_TITLE_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        posts: action.posts,
+      };
+
+    case type.SEARCH_TITLE_FAILED:
+      return {
+        ...state,
+        loading: false,
+        error: action.message,
+      };
+
     default:
       return state;
   }

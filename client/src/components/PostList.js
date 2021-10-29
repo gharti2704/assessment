@@ -11,14 +11,14 @@ const PostList = (props) => {
   //   </div>
   // );
 
-  <Card style={{ width: '18rem' }}>
-    <Card.Body>
-      <Card.Title>{props.title}</Card.Title>
-      <Card.Text>{props.body}</Card.Text>
-      <Card.Link href="#">Card Link</Card.Link>
-      <Card.Link href="#">Another Link</Card.Link>
-    </Card.Body>
-  </Card>;
+  return (
+    <Card style={{ width: '18rem' }}>
+      <Card.Body>
+        <Card.Title>{props.post.title}</Card.Title>
+        <Card.Text>{props.post.body}</Card.Text>
+      </Card.Body>
+    </Card>
+  );
 };
 
 export default PostList;
