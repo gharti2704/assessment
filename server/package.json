@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start:build": "tsc -w",
-    "start:run": "nodemon build/app.js",
+    "start:run": "nodemon ./build/app.js",
     "start": "concurrently npm:start:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
