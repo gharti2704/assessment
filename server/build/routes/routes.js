@@ -53,6 +53,7 @@ router.get('/posts', function (req, res) { return __awaiter(void 0, void 0, void
                 return [4 /*yield*/, getPosts_1.getPosts()];
             case 1:
                 posts = _a.sent();
+                console.log('REQUEST!');
                 res.status(200).json(posts.data);
                 return [3 /*break*/, 3];
             case 2:
