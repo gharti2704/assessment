@@ -12,12 +12,12 @@ const PostList = (props) => {
     <div>
       {post && <EditForm post={post} />}
       <div
-        class="card"
+        className="card"
         onClick={() => {
           handleClick(props.post);
         }}
       >
-        <div class="container">
+        <div className="container">
           <h4>
             <b>{props.post.title}</b>
           </h4>

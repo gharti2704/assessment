@@ -5,8 +5,8 @@ import './EditForm.css';
 
 export default function EditForm({ post }) {
   const [show, setShow] = useState(true);
-  const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
+  const [title, setTitle] = useState(post.title);
+  const [body, setBody] = useState(post.body);
   const posts = useSelector((state) => state.posts.posts);
 
   const handleClose = () => setShow(false);
@@ -17,6 +17,7 @@ export default function EditForm({ post }) {
       if (p.title === post.title) {
         p.title = title;
         p.body = body;
+        console.log(p.title);
       }
     }
 
