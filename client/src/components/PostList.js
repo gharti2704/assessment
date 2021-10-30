@@ -12,6 +12,7 @@ const PostList = (props) => {
     <div>
       {post && <EditForm post={post} />}
       <div
+        data-testid="card"
         className="card"
         onClick={() => {
           handleClick(props.post);

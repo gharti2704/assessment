@@ -17,7 +17,6 @@ export default function EditForm({ post }) {
       if (p.title === post.title) {
         p.title = title;
         p.body = body;
-        console.log(p.title);
       }
     }
 
@@ -44,7 +43,7 @@ export default function EditForm({ post }) {
         style={customStyles}
         ariaHideApp={false}
       >
-        <h2>Edit this post</h2>
+        <h2 style={{ textAlign: 'center' }}>Edit this post</h2>
         <form onSubmit={handleUpdate}>
           <div>
             <div>Edit Title</div>
