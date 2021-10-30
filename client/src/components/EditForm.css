@@ -1,0 +1,23 @@
+.title {
+  margin-bottom: 10px;
+  width: 250px;
+  height: 10px;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.body {
+  margin-bottom: 5px;
+  min-width: 250px;
+  min-height: 250px;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.button {
+  width: 100px;
+  height: 10px;
+  font-size: 15px;
+  padding: 20px;
+  margin: 5px;
+}

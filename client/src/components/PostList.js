@@ -1,25 +1,30 @@
-import React from 'react';
-import { Container, Card } from 'react-bootstrap';
+import React, { useState } from 'react';
+import EditForm from './EditFrom';
+import './PostList.css';
 
 const PostList = (props) => {
-  console.log(typeof props.edit);
+  const [post, setPost] = useState('');
   const handleClick = (post) => {
-    // props.edit(post);
+    setPost(post);
   };
 
   return (
-    <Container>
-      <Card border="secondary" style={{ width: '35rem' }}>
-        <Card.Body
-          onClick={() => {
-            handleClick(props.post);
-          }}
-        >
-          <Card.Title text="dark">{props.post.title}</Card.Title>
-          <Card.Text>{props.post.body}</Card.Text>
-        </Card.Body>
-      </Card>
-    </Container>
+    <div>
+      {post && <EditForm post={post} />}
+      <div
+        class="card"
+        onClick={() => {
+          handleClick(props.post);
+        }}
+      >
+        <div class="container">
+          <h4>
+            <b>{props.post.title}</b>
+          </h4>
+          <p>{props.post.body}</p>
+        </div>
+      </div>
+    </div>
   );
 };
 
