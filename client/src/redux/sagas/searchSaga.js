@@ -10,7 +10,6 @@ function* filterByTitle(action) {
     const filteredPosts = posts.data.filter(
       (post) => post.title === action.payload
     );
-    console.log(filteredPosts);
     yield put({ type: 'SEARCH_TITLE_SUCCESS', posts: filteredPosts });
   } catch (error) {
     yield put({

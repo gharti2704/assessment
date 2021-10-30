@@ -3,6 +3,7 @@ import Post from './Post';
 import Footer from './Footer';
 import Search from './Search';
 import { Container } from 'react-bootstrap';
+import './App.css';
 
 const App = () => {
   return (

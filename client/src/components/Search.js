@@ -1,28 +1,34 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { searchByTitle } from '../redux/actions';
+import { useSelector } from 'react-redux';
+
 import PostList from './PostList';
 
 const Search = () => {
-  const [title, setTitle] = useState('');
-  const dispatch = useDispatch();
-  // const posts = useSelector((state) => state.posts.posts);
-  // console.log(posts);
-  // const loading = useSelector((state) => state.posts.loading);
-  // const error = useSelector((state) => state.posts.error);
-
-  const searchTitle = (e) => {
-    e.preventDefault();
-    dispatch(searchByTitle(title));
-  };
+  const posts = useSelector((state) => state.posts.posts);
+  const [searchTerm, setSearchTerm] = useState('');
 
   return (
     <div>
-      <form onSubmit={searchTitle}>
-        <label> Search by title </label>
-        <input type="text" onChange={(e) => setTitle(e.target.value)} />
-        <button>search</button>
-      </form>
+      <input
+        value={searchTerm}
+        type="text"
+        placeholder="Search by title"
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+
+      {posts
+        .filter((post) => {
+          if (!searchTerm) {
+            return post;
+          } else if (
+            post.title.toLowerCase().includes(searchTerm.toLowerCase())
+          ) {
+            return post;
+          }
+        })
+        .map((p) => {
+          return <PostList post={p} key={p.id} />;
+        })}
     </div>
   );
 };
