@@ -2,7 +2,7 @@
 
 Code assessment for 1-800flowers.com
 
-# GETTING STARTED
+## GETTING STARTED
 
 1. clone the project [here](https://github.com/gharti2704/assessment).
 2. open the project in your favorite code editor.
@@ -11,12 +11,12 @@ Code assessment for 1-800flowers.com
 5. cd to client directory and run 'npm install.'
 6. to start the client run 'npm start.'
 
-# RUNNING TEST FOR SERVER
+## RUNNING TEST FOR SERVER
 
 1. cd to server directory.
 2. run 'npm run test.'
 
-# RUNNING TEST FOR CLIENT
+## RUNNING TEST FOR CLIENT
 
 1. cd to client directory.
 2. run 'npm run test.'
