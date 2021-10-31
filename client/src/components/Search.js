@@ -18,13 +18,9 @@ const Search = () => {
 
       {posts
         .filter((post) => {
-          if (!searchTerm) {
-            return post;
-          } else if (
-            post.title.toLowerCase().includes(searchTerm.toLowerCase())
-          ) {
-            return post;
-          }
+          const regex = new RegExp(`^${searchTerm}`, `gi`);
+
+          return !searchTerm ? post : post.title.match(regex);
         })
         .map((p) => {
           return <PostList post={p} key={p.id} />;
