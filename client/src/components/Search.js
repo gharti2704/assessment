@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import PostList from './PostList';
 
 const Search = () => {
-  const posts = useSelector((state) => state.posts.posts);
+  const posts = useSelector((state) => state.postsReducer.posts);
   const [searchTerm, setSearchTerm] = useState('');
 
   return (

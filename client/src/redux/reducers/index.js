@@ -1,9 +1,6 @@
 import { combineReducers } from 'redux';
-import posts from './posts';
-// import search from './search';
+import postsReducer from './posts';
 
-const reducer = combineReducers({
-  posts: posts,
-});
+const reducer = combineReducers({ postsReducer });
 
 export default reducer;

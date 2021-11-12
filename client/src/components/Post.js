@@ -5,13 +5,12 @@ import PostList from './PostList';
 
 const Post = () => {
   const dispatch = useDispatch();
-  const posts = useSelector((state) => state.posts.posts);
-  const loading = useSelector((state) => state.posts.loading);
-  const error = useSelector((state) => state.posts.error);
-
+  const posts = useSelector((state) => state.postsReducer.posts);
+  const loading = useSelector((state) => state.postsReducer.loading);
+  const error = useSelector((state) => state.postsReducer.error);
   useEffect(() => {
     dispatch(getPosts());
-  }, [dispatch]);
+  }, []);
 
   return (
     <div>

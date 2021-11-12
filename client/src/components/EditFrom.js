@@ -7,7 +7,7 @@ export default function EditForm({ post }) {
   const [show, setShow] = useState(true);
   const [title, setTitle] = useState(post.title);
   const [body, setBody] = useState(post.body);
-  const posts = useSelector((state) => state.posts.posts);
+  const posts = useSelector((state) => state.postsReducer.posts);
 
   const handleClose = () => setShow(false);
 
